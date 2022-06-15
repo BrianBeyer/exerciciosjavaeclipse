@@ -6,6 +6,19 @@ public class Produto {
 	double preco;
 	double desconto;
 	
+	Produto(String nomeInicial){
+		nome = nomeInicial;
+	}
+	
+	Produto(){//metodo construtor padrão, aquele que nao recebe parametro
+		
+	}
+	
+	Produto(String nomeInicial, double precoInicial){
+		nome = nomeInicial;
+		preco = precoInicial;
+	}
+	
 	double precoComDesconto(double descontoExtra) {//uma passagem de parametro
 		return preco*(1-desconto + descontoExtra);
 	}
