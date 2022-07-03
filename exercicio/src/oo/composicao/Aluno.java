@@ -3,8 +3,8 @@ package oo.composicao;
 import java.util.ArrayList;
 
 public class Aluno {
-//exercicio de relaçao de muitos para muitos
-//o aluno tem uma lista de cursos
+///exercicio de relaçao de muitos para muitos
+///o aluno tem uma lista de cursos
 	final String nome;
 	final ArrayList<Curso> cursos = new ArrayList<>();
 	// lista final nao pode ser apontada para outro endereço de memoria, nao pode
