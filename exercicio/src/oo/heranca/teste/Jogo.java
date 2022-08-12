@@ -1,4 +1,9 @@
-package oo.heranca;
+package oo.heranca.teste;
+
+import oo.heranca.Direcao;
+import oo.heranca.Heroi;
+import oo.heranca.Jogador;
+import oo.heranca.Monstro;
 
 public class Jogo {
 	public static void main(String[] args) {
@@ -14,7 +19,7 @@ public class Jogo {
 		j1.atacar(j2);//jogador 1 ataca jogador 2
 		System.out.println("vida do jogador 2 = "+j2.vida);
 		
-		Heroi h1 = new Heroi();
+		Heroi h1 = new Heroi(10, 10);
 		Monstro m1 = new Monstro();
 		m1.andar(Direcao.LESTE);
 		m1.atacar(h1);//monstor ataca heroi

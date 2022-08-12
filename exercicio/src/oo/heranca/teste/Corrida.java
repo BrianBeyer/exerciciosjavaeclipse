@@ -1,4 +1,7 @@
-package oo.heranca.desafio;
+package oo.heranca.teste;
+
+import oo.heranca.desafio.Ferrari;
+import oo.heranca.desafio.Fusca;
 
 public class Corrida {
 	public static void main(String[] args) {
@@ -10,6 +13,7 @@ public class Corrida {
 		fe1.acelerar();
 		fe1.acelerar();
 		fe1.frear();
+		fe1.ligarTurbo();
 		
 		fu1.frear();
 		

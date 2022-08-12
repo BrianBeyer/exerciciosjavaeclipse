@@ -1,21 +1,36 @@
 package oo.heranca.desafio;
 
 public class Carro {
-	int velocidadeAtual = 100;
+	public final int VELOCIDADE_MAXIMA;
+	public int velocidadeAtual = 100;
+	private int delta = 5;
+	protected Carro(int velocidadeMaxima) {//so vai ser usado pra quem tem essa heranca(extends)
+		VELOCIDADE_MAXIMA = velocidadeMaxima;
+	}
 
-	void acelerar() {
-		if (velocidadeAtual > 250) {
-			velocidadeAtual += 0;
+	public void acelerar() {
+		if (velocidadeAtual + getDelta() > VELOCIDADE_MAXIMA) {
+			velocidadeAtual = VELOCIDADE_MAXIMA;// se a velocidade atual + 5 for maior que a velocidade atual,
+												// velocidade atual recebe velocidadeMAxima
 		} else {
-			velocidadeAtual += 5;
+			velocidadeAtual += getDelta();
 		}
 	}
 
-	void frear() {
+	public void frear() {
 		if (velocidadeAtual >= 0) {
 			velocidadeAtual -= 5;
 		} else {
 			velocidadeAtual -= 0;
 		}
 	}
+
+	public int getDelta() {
+		return delta;
+	}
+
+	public void setDelta(int delta) {
+		this.delta = delta;
+	}
+	
 }

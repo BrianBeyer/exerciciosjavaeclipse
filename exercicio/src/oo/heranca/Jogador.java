@@ -1,11 +1,21 @@
 package oo.heranca;
 
 public class Jogador {
-	int x;
-	int y;
-	int vida = 100;
+	public int x;
+	public int y;
+	public int vida = 100;
+	
+	public Jogador(){//construtor padrao de forma explicita
+		this(0, 0);
+	}
 
-	boolean atacar(Jogador oponente) {// recebendo jogador como parametro
+	// Abaixo o construtor de forma explicita
+	public Jogador(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+
+	public boolean atacar(Jogador oponente) {// recebendo jogador como parametro
 
 		int deltaX = Math.abs(x - oponente.x);
 		// math abs retorna valor absoluto, ignora o valor negativo, -4 vira 4
@@ -23,7 +33,7 @@ public class Jogador {
 
 	}
 
-	boolean andar(Direcao direcao) { // Direcao do enum
+	public boolean andar(Direcao direcao) { // Direcao do enum
 		switch (direcao) {
 		case NORTE:
 			y--;
